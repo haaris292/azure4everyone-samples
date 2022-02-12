@@ -56,6 +56,6 @@ az storage account create \
 az vm list \
   -g $group -d \
   --query "[].{name:name,publicIps:publicIps,privateIps:privateIps,user:osProfile.adminUsername,password:'$password'}" \
-  -o jsonc > clouddrive/$group.json
+  -o jsonc > $group.json
 
 cat clouddrive/$group.json
